@@ -21,23 +21,23 @@ const create = async function(request, response) {
     response.json(cardCreated)
 }
 
-const put = async function(request, response) {
-  const updateCard = Card({
-    _id: new mongoose.Types.ObjectId(),
-    title: request.body.title,
-    description: request.body.description,
-    link: request.body.link
-  })
+// const put = async function(request, response) {
+//   const updateCard = Card({
+//     _id: new mongoose.Types.ObjectId(),
+//     title: request.body.title,
+//     description: request.body.description,
+//     link: request.body.link
+//   })
 
-  const cardUpdated = await updateCard.save()
+  // const cardUpdated = await updateCard.save()
 
-  response.json(cardUpdated)
-}
+//   // response.json(cardUpdated)
+// }
 
 //incluir update e delete
 
 module.exports = {
     getAll,
     create,
-    put
+    // put
 }
