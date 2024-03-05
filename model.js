@@ -1,26 +1,26 @@
 // Vamos incluir nossas modelagens de dados aqui
 
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 
-const CardEsquema = new mongoose.Schema({
-  _id: mongoose.Schema.Types.ObjectId,// já é default do mongoose
+const CardSchema = new mongoose.Schema({
+  _id: mongoose.Schema.Types.ObjectId, // já é default do mongoose
   title: {
     type: String,
-    required: true
+    required: true,
   },
   description: {
     type: String,
-    required: true
+    required: true,
   },
   link: {
     type: String,
-    required: true
+    required: true,
   },
-  createAt: {
+  createdAt: {
     type: Date,
     required: true,
-    default: new Date
-  }
-})
+    default: new Date(),
+  },
+});
 
-module.exports = mongoose.model('card', CardEsquema)
+module.exports = mongoose.model("card", CardSchema);
